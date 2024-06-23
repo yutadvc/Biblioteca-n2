@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/main6.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- cabeçario -->
+    <div class="fundo-inicial"></div>
+    <div class="logo-gov"></div>
+    <div class="logo-ete"></div>
+    <div class="search-box">
+        <input type="text" class="pesquisa" placeholder="Pesquisar:">
+        <a class="btn">
+            <div class="lupa-azul"></div>
+            <div class="lupa-clara"></div>
+        </a>
+    </div>
+    <!-- meio -->
+     <div class="fundo"></div>
+     <div class="capa"></div>
+     <span class="titulo">Dom Quixote</span>
+     <span class="material">Material</span>
+     <span class="livro">Livro</span>
+     <span class="idioma">Idioma</span>
+     <span class="ptbr">Português</span>
+     <span class="descr">Descrição Fisica</span>
+     <span class="p240">540, 555; 23x14cm</span>
+     <span class="publi">Publicação</span>
+     <span class="publi1">Lisboa (POR): Francisco Arthur da Silva 1877</span>
+     <span class="assunto">Assunto</span>
+     <span class="assunto1">Romance Espanhol</span>
+     <span class="resumo">Resumo</span>
+     <span class="resumo1"> A obra narra as aventuras e desventuras de Dom Quixote, um homem de meia idade que resolveu se tornar cavaleiro andante depois de ler muitos romances de cavalaria. Providenciando cavalo e armadura, resolve lutar para provar seu amor por Dulcineia de Toboso, uma mulher imaginária. Consegue também um escudeiro, Sancho Pança, que resolve acompanhá-lo, acreditando que será recompensado. Quixote mistura fantasia e realidade, se comportando como se estivesse em um romance de cavalaria. Transforma obstáculos banais (como moinhos de vento ou ovelhas) em gigantes e exércitos de inimigos. É derrotado e espancado inúmeras vezes, sendo batizado de "Cavaleiro da Fraca Figura", mas sempre se recupera e insiste nos seus objetivos. Só volta para casa quando é vencido em batalha por outro cavaleiro e forçado a abandonar a cavalaria. Longe da estrada, fica doente e acaba morrendo. Nos seus momentos finais, recupera a consciência e pede perdão aos seus amigos e familiares.</span>
+     <span class="autores">Autores</span>
+     <span class="autor">Miguel de Cervantes</span>
+
+     <!-- botão de reservar-->
+        <button class="reserva-button">
+        <span class="nome">Reservar</span>
+        <div class="calen"></div>
+        </button>
+
+        <!-- botão de voltar -->
+         <a href="file:///C:/Users/nicol/OneDrive/%C3%81rea%20de%20Trabalho/n2humberto/index.html">
+            <button class="voltar-button">
+                <div class="seta"></div>
+                <span class="voltar-nome">Voltar</span>
+            </button>
+        </a>
+      
+
+</body>
+</html>    
