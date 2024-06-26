@@ -89,40 +89,37 @@
 </body>
 </html>
 
-<?php
-$servername = "localhost";
-$username = "root";
-$password = " yes ";
-$dbname = "biblioteca";
+<?php 
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $database = "biblioteca";
 
-// Cria a conexão
-$conn =  mysqli_connect($servername, $username, $password, $dbname);
+    $conn = mysqli_connect($host,$user,$password,$database);
 
-// Verifica a conexão
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
-// Obtém os dados do formulário
-if($_SERVER ["REQUEST_METHOD"] == "POST"){
-$titulo = $_POST['titulo'];
-$autor = $_POST['autor'];
-$editora = $_POST['editora'];
-$ano = $_POST['ano'];
-$isbn = $_POST['isbn'];
-$dia = $_POST['dia'];
+    if (mysqli_connect_errno()){
+        die("Não vai dar não BD foi de base".$conn ->connect_error);
+    }
 
-// Prepara a instrução SQL para inserir os dados
+    if($_SERVER ["REQUEST_METHOD"] == "POST"){
+        $titulo = $_POST['titulo'];
+        $autor = $_POST['autor'];
+        $editora = $_POST['editora'];
+        $ano = $_POST['ano'];
+        $isbn = $_POST['isbn'];
+        $dia = $_POST['dia'];
 
-$sql = "INSERT INTO  cadastro (titulo, autor, editora, ano, isbn) VALUES ('$titulo', '$autor', '$editora', '$ano', '$isbn')";
- $sql_consulta = "SELECT log FROM cadastro";
+    
+       
+        $sql =  "INSERT INTO cadastro (Nome, Telefone, Email, senha) VALUES('$titulo','$autor','$editora','$ano','$isbn','$dia')";
+        $sql_consulta = "SELECT log FROM cadastro";
         $resultado = mysqli_query($conn, $sql_consulta);
-// Executa a instrução SQL
-if($conn -> query($sql) == TRUE){
-            echo "livro cadastrado";
+
+        if($conn -> query($sql) == TRUE){
+            echo "Dados inseridos com sucesso";
         } else{
             echo "Dados errados";
         }
-
 
 // Fecha a conexão
 $conn -> close();
