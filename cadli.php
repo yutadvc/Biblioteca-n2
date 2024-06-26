@@ -1,3 +1,39 @@
+<?php 
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $database = "biblioteca";
+
+    $conn = mysqli_connect($host,$user,$password,$database);
+
+    if (mysqli_connect_errno()){
+        die("Não vai dar não BD foi de base".$conn ->connect_error);
+    }
+
+    if($_SERVER ["REQUEST_METHOD"] == "POST"){
+        $titulo = $_POST['titulo'];
+        $autor = $_POST['autor'];
+        $editora = $_POST['editora'];
+        $ano = $_POST['ano'];
+        $isbn = $_POST['isbn'];
+    
+       
+        $sql =  "INSERT INTO cadastro (titulo, autor, editora, ano, isbn) VALUES('$titulo','$autor','$editora','$ano','$isbn')";
+        $sql_consulta = "SELECT log FROM cadastro";
+        $resultado = mysqli_query($conn, $sql_consulta);
+
+        if($conn -> query($sql) == TRUE){
+            echo "Dados inseridos com sucesso";
+        } else{
+            echo "Dados errados";
+        }
+
+      $conn -> close();
+    }else{
+        header("location: index.html");
+        exit();
+    }
+?>;
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -88,42 +124,3 @@
     </style>
 </body>
 </html>
-
-<?php 
-    $host = "localhost";
-    $user = "root";
-    $password = "";
-    $database = "biblioteca";
-
-    $conn = mysqli_connect($host,$user,$password,$database);
-
-    if (mysqli_connect_errno()){
-        die("Não vai dar não BD foi de base".$conn ->connect_error);
-    }
-
-    if($_SERVER ["REQUEST_METHOD"] == "POST"){
-        $titulo = $_POST['titulo'];
-        $autor = $_POST['autor'];
-        $editora = $_POST['editora'];
-        $ano = $_POST['ano'];
-        $isbn = $_POST['isbn'];
-        $dia = $_POST['dia'];
-
-    
-       
-        $sql =  "INSERT INTO cadastro (Nome, Telefone, Email, senha) VALUES('$titulo','$autor','$editora','$ano','$isbn','$dia')";
-        $sql_consulta = "SELECT log FROM cadastro";
-        $resultado = mysqli_query($conn, $sql_consulta);
-
-        if($conn -> query($sql) == TRUE){
-            echo "Dados inseridos com sucesso";
-        } else{
-            echo "Dados errados";
-        }
-
-// Fecha a conexão
-$conn -> close();
- }else{
-        header("location: index.html");
-        exit();
-    }
