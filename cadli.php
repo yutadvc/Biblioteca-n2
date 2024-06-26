@@ -91,19 +91,19 @@
 
 <?php
 $servername = "localhost";
-$username = "seu_usuario";
-$password = "sua_senha";
-$dbname = "nome_do_banco_de_dados";
+$username = "root";
+$password = " yes ";
+$dbname = "biblioteca";
 
 // Cria a conexão
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn =  mysqli_connect($servername, $username, $password, $dbname);
 
 // Verifica a conexão
 if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
-
 // Obtém os dados do formulário
+if($_SERVER ["REQUEST_METHOD"] == "POST"){
 $titulo = $_POST['titulo'];
 $autor = $_POST['autor'];
 $editora = $_POST['editora'];
@@ -112,15 +112,21 @@ $isbn = $_POST['isbn'];
 $dia = $_POST['dia'];
 
 // Prepara a instrução SQL para inserir os dados
-$sql = "INSERT INTO livros (titulo, autor, editora, ano, isbn) VALUES ('$titulo', '$autor', '$editora', '$ano', '$isbn')";
 
+$sql = "INSERT INTO  cadastro (titulo, autor, editora, ano, isbn) VALUES ('$titulo', '$autor', '$editora', '$ano', '$isbn')";
+ $sql_consulta = "SELECT log FROM cadastro";
+        $resultado = mysqli_query($conn, $sql_consulta);
 // Executa a instrução SQL
-if ($conn->query($sql) === TRUE) {
-    echo "Livro cadastrado com sucesso!";
-} else {
-    echo "Erro: " . $sql . "<br>" . $conn->error;
-}
+if($conn -> query($sql) == TRUE){
+            echo "livro cadastrado";
+        } else{
+            echo "Dados errados";
+        }
+
 
 // Fecha a conexão
-$conn->close();
-?>
+$conn -> close();
+ }else{
+        header("location: index.html");
+        exit();
+    }
