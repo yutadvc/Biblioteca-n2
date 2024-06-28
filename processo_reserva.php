@@ -1,3 +1,4 @@
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -40,25 +41,29 @@ try {
                 // Confirma a transação
                 $conn->commit();
 
-                echo "Livro reservado com sucesso!";
-            } catch (Exception $e) {
-                // Desfaz a transação em caso de erro
-                $conn->rollback();
-                throw $e;
-            }
-        } else {
-            echo "Livro indisponível para reserva.";
-        }
-    } else {
-        echo "Livro não encontrado.";
+                echo "<div class='message-container'>
+                <p>Seu livro foi reservado com sucesso! Por favor, dirija-se à biblioteca para retirá-lo.</p>
+                <a href='reserva_livro.php' class='btn-voltar'>Voltar para a página inicial</a>
+              </div>";
+    } catch (Exception $e) {
+        // Desfaz a transação em caso de erro
+        $conn->rollback();
+        throw $e;
     }
+} else {
+    echo "Livro indisponível para reserva.";
+}
+} else {
+echo "Livro não encontrado.";
+}
 
 } catch (Exception $e) {
-    echo "Erro: " . $e->getMessage();
+echo "Erro: " . $e->getMessage();
 } finally {
-    // Fecha a conexão
-    $conn->close();
+// Fecha a conexão
+$conn->close();
 }
+?>
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,12 +77,36 @@ try {
 
 
     <style>
-        a{
-            text-decoration: none;
-            color: red;
-        }
-        </style>
-        ,
+    .message-container {
+        text-align: center;
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: 50px auto;
+    }
+
+    .message-container p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .btn-voltar {
+        display: inline-block;
+        background-color: #5cb85c;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-voltar:hover {
+        background-color: #4cae4c;
+    }
+</style>
 
 </body>
 </html>
