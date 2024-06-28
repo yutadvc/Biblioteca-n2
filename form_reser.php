@@ -106,5 +106,5 @@
             <input type="submit" value="Reservar">
         </form>
     </div>
-</body>
+</body> 
 </html>
