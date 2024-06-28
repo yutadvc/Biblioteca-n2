@@ -46,7 +46,7 @@
             box-sizing: border-box;
         }
 
-        input[type="submit"] {
+        .btn {
             background-color: #5cb85c;
             color: white;
             border: none;
@@ -56,7 +56,7 @@
             width: 100%;
         }
 
-        input[type="submit"]:hover {
+        .btn:hover {
             background-color: #4cae4c;
         }
     </style>
@@ -103,7 +103,7 @@
                 ?>
             </select>
             
-            <input type="submit" value="Reservar">
+            <input class="btn" type="submit" value="Reservar">
         </form>
     </div>
 </body> 
