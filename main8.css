@@ -1,0 +1,458 @@
+body{
+    height: 100%;
+    margin: 0;
+    background: #E1F1FF;
+}
+.logo-gov{
+    width: 128px;
+    height: 99px;
+    background: url("../imagem/imagem1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 70px;
+    overflow: hidden;
+}
+.fundo-inicial{
+    width: 100%;
+    height: 100px;
+    background: #1DCCFF;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo-ete{
+    width: 128px;
+    height: 99px;
+    background: url("../imagem/image\ 3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 240px;
+    overflow: hidden;
+}
+.cadastro{
+    position: absolute;
+    top: 43px;
+    right: 400px;
+    text-decoration: none;
+  }
+  .cad{
+      width: 200px;
+      height: 50px;
+      opacity: 1;
+      color: #E1F1FF;
+      font-family: open sans;
+      font-weight: bold;
+      font-size: 25px;
+  }
+.search-box{
+    position: absolute;
+    top: 30px;
+    right: 100px;
+
+    background: #E1F1FF;
+    border-radius: 40px;
+    padding: 8px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pesquisa{
+    width: 200px;
+    background: none;
+    border: 0;
+    outline: 0;
+
+    padding-left: 10px;
+    transition: 0.4s;
+
+    font-size: 20px;
+}
+.lupa-clara{
+    width: 30px;
+    height: 30px;
+    background: url("../imagem/lupaciana.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+}
+.btn{
+    width: 50px;
+    height: 40px;
+    border-radius: 50px;
+    background:  #1DCCFF;
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.fundo {
+    width: 65%;
+    height: 1150px;
+    background: #E1F1FF;
+    position: absolute;
+    top: 180px;
+    left: 250px;
+    border: 45px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #1DCCFF;
+}
+.capa{
+    width: 200px;
+    height: 330px;
+    background: url("../imagem/diario1.jpeg");
+    opacity: 1;
+    position: absolute;
+    top: 250px;
+    left: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: center center;
+    
+}
+.titulo{
+    width: 720px;
+    height: 80px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 260px;
+    right: 210px;
+    font-family: open sans;
+    font-weight: Bold;
+    font-size: 40px;
+}
+.material{
+    width: 300px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 360px;
+    right: 635px;
+    font-family: open sans;
+    font-weight: bold;
+    font-size: 40px;
+}
+.livro{
+    width: 100px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 410px;
+    right: 800px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 35px;
+}
+.idioma {
+    width: 200px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 360px;
+    right: 540px;
+    font-family: open sans;
+    font-weight: bold;
+    font-size: 40px;
+}
+.ptbr{
+    width: 100px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 410px;
+    right: 666px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 35px;
+}
+.descr{
+    width: 300px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 360px;
+    right: 265px;
+    font-family: open sans;
+    font-weight: bold;
+    font-size: 40px;
+}
+.p240{
+    width: 500px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 410px;
+    right: 70px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 35px;
+}
+.publi{
+    width: 300px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 480px;
+    right: 635px;
+    font-family: open sans;
+    font-weight: bold;
+    font-size: 36px;
+}
+.publi1{
+    width: 730px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 530px;
+    right: 220px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 33px;
+}
+.assunto{
+    width: 300px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 600px;
+    left: 370px;
+    font-family: open sans;
+    font-weight: bold;
+    font-size: 36px;   
+}
+.assunto1{
+    width: 375px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 660px;
+    left: 320px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 33px;
+    padding: 5px;
+    border: 6px;
+    border-color: #1DCCFF;
+    border-radius: 19px;
+    border-style: solid; 
+}
+.assunto2{
+    width:210px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 660px;
+    left: 755px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 33px;
+    padding: 5px;
+    border: 6px;
+    border-color: #1DCCFF;
+    border-radius: 19px;
+    border-style: solid; 
+}
+.resumo{
+    width: 300px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 750px;
+    left: 370px;
+    font-family: open sans;
+    font-weight: bold;
+    font-size: 36px;
+}
+.resumo1{
+    width: 910px;
+    height: 500px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 810px;
+    left: 323px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 30px;
+}
+.autores{
+    width: 300px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 1195px;
+    left: 370px;
+    font-family: open sans;
+    font-weight: bold;
+    font-size: 36px;
+}
+.autor {
+    width: 330px;
+    height: 50px;
+    opacity: 1;
+    color: #000000;
+    position: absolute;
+    top: 1265px;
+    left: 333px;
+    font-family: open sans;
+    font-weight: lighter;
+    font-size: 33px;
+    padding: 5px;
+    padding-left: 25px;
+    border: 6px;
+    border-color: #1DCCFF;
+    border-radius: 19px;
+    border-style: solid;
+}
+
+.reserva-button{
+    width: 115px;
+    position: absolute;
+    top: 185px;
+    right: 300px;
+
+    background: #006691;
+    border-radius: 40px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nome{
+    width: 75px;
+    background: none;
+    border: 0;
+    outline: 0;
+    color: #E1F1FF;
+
+    padding: 5px;
+
+    font-size: 17px;
+}
+.calen{
+    width: 27px;
+    height: 27px;
+    background: url("../imagem/calendario1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+      
+}
+
+/* botão voltar */
+
+.voltar-button{
+    width: 90px;
+    height: 30px;
+    position: absolute;
+    top: 185px;
+    left: 300px;
+
+    background: none;
+    border-radius: 40px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.voltar-nome{
+    width: 45px;
+    background: none;
+    border: 0;
+    outline: 0;
+    color: #000;
+
+    padding: 5px;
+
+    font-size: 17px;
+}
+.seta{
+    width: 35px;
+    height: 35px;
+    background: url("../imagem/arrow.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.rodape {
+    width: 100%;
+    height: 200px;
+    background: #1DCCFF;
+    position: absolute;
+    top: 1500px;
+  }
+  
+.email{
+    width: 200px;
+    height: 10px;
+    color: #000000;
+    position: absolute;
+    font-size: 35px;
+    font-family: open sans;
+    font-weight: bold;
+    top: 20px;
+    left: 150px;
+  }
+  .telefone{
+    width: 500px;
+    height: 10px;
+    color: #000000;
+    position: absolute;
+    font-size: 35px;
+    font-family: open sans;
+    font-weight: bold;
+    top: 60px;
+    left: 150px;
+  }
+  .alunos{
+    width: 1200px;
+    height: 10px;
+    color: #000000;
+    position: absolute;
+    font-size: 35px;
+    font-family: open sans;
+    font-weight: bold;
+    top: 100px;
+    left: 150px;
+  }
+  .turma{
+    width: 300px;
+    height: 10px;
+    color: #000000;
+    position: absolute;
+    font-size: 35px;
+    font-family: open sans;
+    font-weight: bold;
+    top: 140px;
+    left: 150px;
+  }
